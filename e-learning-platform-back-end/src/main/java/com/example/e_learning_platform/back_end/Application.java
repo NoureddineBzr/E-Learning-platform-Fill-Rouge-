@@ -1,13 +1,13 @@
-package com.e_learning_platform;
+package com.example.e_learning_platform.back_end;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ELearningPlatformApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ELearningPlatformApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
