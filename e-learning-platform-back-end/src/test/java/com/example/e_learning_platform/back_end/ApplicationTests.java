@@ -1,10 +1,10 @@
-package com.e_learning_platform;
+package com.example.e_learning_platform.back_end;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ELearningPlatformApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
