@@ -1,2 +1,6 @@
-package com.backEnd.enums;public enum Currency {
+package com.backEnd.enums;
+
+public enum Currency {
+    MAD,USD
 }
+
