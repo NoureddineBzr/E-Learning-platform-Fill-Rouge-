@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class LoginRequestDto {
+package com.backEnd.dto;
+
+public class LoginRequestDto {
 }

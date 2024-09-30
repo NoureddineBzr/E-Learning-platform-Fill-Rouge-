@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class PaymentIntentDto {
+package com.backEnd.dto;
+
+public class PaymentIntentDto {
 }

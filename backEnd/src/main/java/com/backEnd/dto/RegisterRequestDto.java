@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class RegisterRequestDto {
+package com.backEnd.dto;
+
+public class RegisterRequestDto {
 }

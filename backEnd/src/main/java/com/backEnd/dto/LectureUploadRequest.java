@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class LectureUploadRequest {
+package com.backEnd.dto;
+
+public class LectureUploadRequest {
 }
