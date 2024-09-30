@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class AccessTokenDto {
+package com.backEnd.dto;
+
+public class AccessTokenDto {
 }
