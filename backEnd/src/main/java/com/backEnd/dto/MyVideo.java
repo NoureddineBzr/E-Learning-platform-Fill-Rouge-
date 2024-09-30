@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class MyVideo {
+package com.backEnd.dto;
+
+public class MyVideo {
 }
