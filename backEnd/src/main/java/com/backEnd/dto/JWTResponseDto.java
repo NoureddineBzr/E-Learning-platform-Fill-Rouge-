@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class JWTResponseDto {
+package com.backEnd.dto;
+
+public class JWTResponseDto {
 }
