@@ -1,8 +1,4 @@
 package com.backEnd.entity;
 
-
-public class AppUser {
-
-
+public class University {
 }
-
