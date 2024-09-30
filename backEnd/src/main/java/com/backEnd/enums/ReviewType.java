@@ -1,6 +1,6 @@
 package com.backEnd.enums;
 
 public enum ReviewType {
-    OURSE,
+    COURSE,
     LECTURE
 }
