@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class RoleDto {
+package com.backEnd.dto;
+
+public class RoleDto {
 }
