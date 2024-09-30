@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class CourseDto {
+package com.backEnd.dto;
+
+public class CourseDto {
 }
