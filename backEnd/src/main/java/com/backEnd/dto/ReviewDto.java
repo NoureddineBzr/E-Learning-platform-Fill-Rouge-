@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class ReviewDto {
+package com.backEnd.dto;
+
+public class ReviewDto {
 }

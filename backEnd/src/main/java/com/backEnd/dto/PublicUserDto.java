@@ -1,2 +1,4 @@
-package com.backEnd.dto;public class PublicUserDto {
+package com.backEnd.dto;
+
+public class PublicUserDto {
 }
