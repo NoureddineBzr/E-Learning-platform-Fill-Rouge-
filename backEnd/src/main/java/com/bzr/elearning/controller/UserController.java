@@ -1,0 +1,54 @@
+package com.bzr.elearning.controller;
+
+import com.bzr.elearning.Dto.UserDto;
+import com.bzr.elearning.serviceImpl.UserServiceImpl;
+import com.bzr.elearning.utils.AppResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import java.io.IOException;
+
+@RestController
+@RequestMapping(path = "/api/users")
+public class UserController {
+
+    @Autowired
+    UserServiceImpl userServiceImpl;
+
+
+    @GetMapping("")
+    public ResponseEntity<Object> allUsers(){
+        return AppResponse.generateResponse("all_users", HttpStatus.OK, userServiceImpl.findAll(),true);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Object> findById(@PathVariable Long id){
+        return AppResponse.generateResponse("user_data", HttpStatus.OK, userServiceImpl.findById(id),true);
+    }
+
+    @GetMapping("/getMyProfile")
+    public ResponseEntity<Object> getMyProfile(){
+        return AppResponse.generateResponse("you_profile_info", HttpStatus.OK, userServiceImpl.getMyProfile() ,true);
+    }
+
+    @PutMapping("/updateMyProfile")
+    public ResponseEntity<Object> updateMyProfile(@RequestBody UserDto newData){
+        return AppResponse.generateResponse("you_profile_updated_success", HttpStatus.OK, userServiceImpl.updateProfile(newData) ,true);
+    }
+
+    @PutMapping("/updatePassword")
+    public ResponseEntity<Object> updatePassword(@RequestBody String newPassword){
+        return AppResponse.generateResponse("you_profile_updated_success", HttpStatus.OK, userServiceImpl.updatePassword(newPassword) ,true);
+    }
+
+
+    @PostMapping("/updateProfileImage")
+    public ResponseEntity<Object>  updateProfileImage(@RequestParam("profileImage")MultipartFile profileImage) throws IOException {
+        userServiceImpl.updateProfileImage(profileImage);
+        return AppResponse.generateResponse("you_profile_image_updated_success", HttpStatus.OK, null  ,true);
+    }
+
+
+}
