@@ -1,10 +1,10 @@
-package com.backEnd;
+package com.bzr.elearning;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackEndApplicationTests {
+class ELearningApplicationTests {
 
 	@Test
 	void contextLoads() {
