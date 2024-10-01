@@ -1,0 +1,26 @@
+package com.bzr.elearning.Dto;
+
+import com.bzr.elearning.entity.Organization;
+import com.bzr.elearning.enums.Country;
+import lombok.*;
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@ToString
+public class RegisterDto {
+
+    private String username;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+    private String role;
+}
