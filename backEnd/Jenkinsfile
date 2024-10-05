@@ -20,7 +20,7 @@ pipeline {
 
 //         stage('Build & Test filRouge') {
 //             steps {
-//                 dir('BackEnd') {
+//                 dir('backEnd') {
 //                     withMaven(maven: 'mvn') {
 //                         bat 'mvn clean install'
 //                     }
@@ -33,7 +33,7 @@ pipeline {
                 script {
                     def scannerHome = tool 'SonarQubeScanner'
                     dir('backEnd') {
-                        bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=BackEnd -Dsonar.sources=. -Dsonar.host.url=${SONARQUBE_SERVER} -Dsonar.login=${SONARQUBE_TOKEN} -Dsonar.java.binaries=target/classes"
+                        bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=backEnd -Dsonar.sources=. -Dsonar.host.url=${SONARQUBE_SERVER} -Dsonar.login=${SONARQUBE_TOKEN} -Dsonar.java.binaries=target/classes"
                     }
                 }
             }
