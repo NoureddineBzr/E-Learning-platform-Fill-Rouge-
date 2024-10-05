@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerHubCredentials')
-        SONARQUBE_TOKEN = 'squ_57e48b587170f9011b19918d492a3f03d2b9e7b3'
+        SONARQUBE_TOKEN = 'sqp_630eb6c9722626f365aac23a0d78e9c75f9a0333'
         SONARQUBE_SERVER = 'http://localhost:9000'
     }
 
