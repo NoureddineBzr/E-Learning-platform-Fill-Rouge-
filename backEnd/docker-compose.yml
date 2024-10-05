@@ -6,7 +6,7 @@ services:
     ports:
       - '8091:8090'
     depends_on:
-      - 
+      -
       - mysqldb
     networks:
       - learning-network
