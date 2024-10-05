@@ -1,0 +1,57 @@
+{
+    "email" : "البريد اللإلكتروني",
+    "first_name" : "الاسم الأول",
+    "last_name" : "الاسم الأخير",
+    "username": "اسم المستخدم",
+    "password": "كلمة السر",
+
+    "register": "تسجيل",
+    "notifications": "الإشعارات",
+    "save":"حفظ",
+    "cancel":"الغاء",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "my_courses": "الدورات الخاصة بي",
+    "add_new_course": "إضافة دورة جديدة",
+    "edit_course": "تعديل الدورة",
+    "course_title": "اسم الدورة",
+    "course_description": "الوصف",
+    "is_course_free": "هل الدورة مجانية",
+    "discount": "الخصم",
+    "start_date": "تاريخ البدء",
+    "end_date": "تاريخ الإنتهاء",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "required": "مطلوب ",
+    "max_length_is": "أكبر عدد من الأحر المسموح",
+    "min_length_is": "أقل عدد من الأحر المسموح",
+    "max_value_is": "أكبر قيمة مسموح بها",
+    "min_value_is": "أصغر قيمة مسموح بها"
+
+}
