@@ -18,15 +18,15 @@ pipeline {
             }
         }
 
-//         stage('Build & Test filRouge') {
-//             steps {
-//                 dir('backEnd') {
-//                     withMaven(maven: 'mvn') {
-//                         bat 'mvn clean install'
-//                     }
-//                 }
-//             }
-//         }
+        stage('Build & Test filRouge') {
+            steps {
+                dir('backEnd') {
+                    withMaven(maven: 'mvn') {
+                        bat 'mvn clean install'
+                    }
+                }
+            }
+        }
 
         stage('SonarQube Analysis') {
             steps {
