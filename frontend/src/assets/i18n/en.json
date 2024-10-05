@@ -1,0 +1,71 @@
+{
+    "email": "email",
+    "first_name" : "first name",
+    "last_name" : "last name",
+    "username": "username",
+    "password": "password",
+    "update_password": "Update password",
+    "confirm_password": "Confirm password",
+    "password_confirm": "Password confirm",
+    "date_of_birth": "Date of birth",
+    "update_image": "Update image",
+    
+    "register": "register",
+    
+    "notifications": "notifications",
+    "save":"save",
+    "cancel":"cancel",
+
+
+
+
+
+
+
+
+
+
+    "my_courses": "my courses",
+    "add_new_course": "add new course",
+    "edit_course": "edit course",
+    "course_title": "course title",
+    "course_description": "course description",
+    "is_course_free":"is course free",
+    "discount": "discount",
+    "start_date": "start date",
+    "end_date": "end date",
+    "enrolled_students":"Enrolled students",
+    "view_course": "View course",
+
+
+    "lecture":"lecture",
+    "lectures": "Lectures",
+    "course_lectures": "Course lectures",
+    "auto_play_next": "Auto play next",
+
+    "add_lecture":"Add lecture",
+    "lecture_title": "Lecture title",
+    "lecture_description":"Lecture Description",
+    
+
+    "faculty":"faculty",
+    "all_faculties":"all faculties",
+    "faculties":"faculties",
+    "add_new_faculty":"add new faculty",
+    "edit_faculty":"edit faculty",
+    "academic_specialization":"academic specialization",
+    "university":"university",
+    
+    "review": "Review",
+    "reviews": "Reviews",
+    "leave_review": "Leave review",
+    "review_added_success":"Review added success",
+    "reveiw_content":"Reveiw content",
+ 
+    "max_length_is": "max length is",
+    "min_length_is": "min length is",
+    "max_value_is": "max value is",
+    "min_value_is": "min value is"
+
+
+}
