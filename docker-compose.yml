@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  filRouge:
+    image: noureddinebzr/filrouge:latest
+    ports:
+      - '8090:8090'
+    depends_on:
+      - mysqldb
+    networks:
+      - learning-network
+
+  mysqldb:
+    image: "mysql:latest"
+    environment:
+      MYSQL_DATABASE: e_learning
+      MYSQL_ALLOW_EMPTY_PASSWORD: 0000
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysqldb:/var/lib/mysql
+    networks:
+      - learning-network
+
+
+volumes:
+  mysqldb:
+
+networks:
+  learning-network:
+    driver: bridge
