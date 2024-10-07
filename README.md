@@ -42,8 +42,3 @@ This E-learning application was developed by **Noureddine Bouzire** (email: bouz
 - **Jenkins** configured for continuous integration
 - **MySQL** installed and configured
 
-## MySQL Database Setup
-1. Install **MySQL** on your machine.
-2. Create a new MySQL database:
-   ```sql
-   CREATE DATABASE elearning_db;
