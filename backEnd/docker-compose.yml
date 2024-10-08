@@ -1,31 +1,61 @@
+#version: "3.8"
+#
+#services:
+#  filRouge:
+#    image: noureddinebzr/filrouge:latest
+#    ports:
+#      - '8090:8090'
+#    depends_on:
+#      - mysqldb
+#    networks:
+#      - learning-network
+#
+#  mysqldb:
+#    image: "mysql:latest"
+#    environment:
+#      MYSQL_DATABASE: e_learning
+#      MYSQL_ALLOW_EMPTY_PASSWORD: 0000
+#    ports:
+#      - "3307:3306"
+#    volumes:
+#      - mysqldb:/var/lib/mysql
+#    networks:
+#      - learning-network
+#
+#
+#volumes:
+#  mysqldb:
+#
+#networks:
+#  learning-network:
+#    driver: bridge
+
+
+
 version: "3.8"
 
 services:
-  filRouge:
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=e_learning
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+    ports:
+      - '3307:3306'
+
+  cake_app:
     image: noureddinebzr/filrouge:latest
     ports:
       - '8090:8090'
-    depends_on:
-      - mysqldb
-    networks:
-      - learning-network
-
-  mysqldb:
-    image: "mysql:latest"
     environment:
-      MYSQL_DATABASE: e_learning
-      MYSQL_ALLOW_EMPTY_PASSWORD: 0000
-    ports:
-      - "3307:3306"
-    volumes:
-      - mysqldb:/var/lib/mysql
-    networks:
-      - learning-network
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/e_learning
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - mysql-db
 
-
-volumes:
-  mysqldb:
-
-networks:
-  learning-network:
-    driver: bridge
