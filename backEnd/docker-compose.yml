@@ -4,9 +4,8 @@ services:
   filRouge:
     image: noureddinebzr/filrouge:latest
     ports:
-      - '8091:8090'
+      - '8090:8090'
     depends_on:
-      -
       - mysqldb
     networks:
       - learning-network
