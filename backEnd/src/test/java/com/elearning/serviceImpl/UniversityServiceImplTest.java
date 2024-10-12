@@ -14,5 +14,7 @@ class UniversityServiceImplTest {
     void save() {
     }
 
-   
+    @Test
+    void deleteById() {
+    }
 }
