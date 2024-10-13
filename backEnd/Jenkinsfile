@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('docker-hub-credentials')
+        DOCKERHUB_CREDENTIALS = credentials('dockerHubCredentials')
         SONARQUBE_TOKEN = 'squ_c583b9cd83e0fc9a1bb25afa4534c2bbc4750a07'
         SONARQUBE_SERVER = 'http://localhost:9000'
     }
@@ -49,7 +49,7 @@ pipeline {
                             def imageTag = env.TAG_VERSION ?: 'latest'
                             def dockerImage = docker.build("noureddinebzr/filrouge:${imageTag}")
 
-                            docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
+                            docker.withRegistry('https://index.docker.io/v1/', 'dockerHubCredentials') {
                                 dockerImage.push()
                             }
                         } catch (Exception e) {
