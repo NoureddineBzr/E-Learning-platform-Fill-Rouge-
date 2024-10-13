@@ -48,7 +48,7 @@ services:
       - '3307:3306'
 
   cake_app:
-    image: noureddinebzr/filrouges:latest
+    image: noureddinebzr/filrouge:latest
     ports:
       - '8090:8090'
     environment:
