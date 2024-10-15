@@ -36,14 +36,32 @@ public class CourseServiceImpl implements CourseService {
     private final UserServiceImpl userService;
     private final CourseMapper courseMapper;
 
+//    @Override
+//    public CourseDto save(CourseUploadRequest courseUploadRequest, MultipartFile coverImageFile) throws IOException {
+//
+//        String courseCoverImageName = FileUtils.SaveFileAndGetName(coverImageFile, courseUploadRequest.getTitle());
+//        CourseDto courseDto = CourseMapper.uploadRequestToDto(courseUploadRequest, courseCoverImageName);
+//        courseDto.setLecturesCount(0);
+//        courseDto.setEnrolledStudentsCount(0);
+//        courseDto.setReviewsCount(0);
+//        Course newCourse = courseRepository.save(CourseMapper.dtoToEntity(courseDto));
+//
+//        return CourseMapper.entityToDto(newCourse);
+//    }
+
     @Override
     public CourseDto save(CourseUploadRequest courseUploadRequest, MultipartFile coverImageFile) throws IOException {
-
         String courseCoverImageName = FileUtils.SaveFileAndGetName(coverImageFile, courseUploadRequest.getTitle());
         CourseDto courseDto = CourseMapper.uploadRequestToDto(courseUploadRequest, courseCoverImageName);
+
+        // Récupérer l'utilisateur authentifié (l'auteur du cours)
+        PublicUserDto author = UserMapper.entityToPublicUserDto(userService.getCurrentAuthUser());
+        courseDto.setAuthor(author);
+
         courseDto.setLecturesCount(0);
         courseDto.setEnrolledStudentsCount(0);
         courseDto.setReviewsCount(0);
+
         Course newCourse = courseRepository.save(CourseMapper.dtoToEntity(courseDto));
 
         return CourseMapper.entityToDto(newCourse);
