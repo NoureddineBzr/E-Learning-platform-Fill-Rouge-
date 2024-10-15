@@ -47,7 +47,7 @@ services:
     ports:
       - '3307:3306'
 
-  cake_app:
+  elearning_app:
     image: noureddinebzr/filrouge:latest
     ports:
       - '8090:8090'
